@@ -13,9 +13,9 @@ package Data_Flow_Analysis is
    -- The Control Flow Graph (CFG) representation.
    -- Uses discriminants to strongly bind the graph size upon instantiation.
    type Control_Flow_Graph (Nodes : Node_ID; Facts : Fact_ID) is record
-      Edges : Adjacency_Matrix (1 .. Nodes, 1 .. Nodes) := (others => (others => False));
-      Gen   : Fact_Matrix (1 .. Nodes, 1 .. Facts)      := (others => (others => False));
-      Kill  : Fact_Matrix (1 .. Nodes, 1 .. Facts)      := (others => (others => False));
+      Edges : Adjacency_Matrix (1 .. Nodes, 1 .. Nodes) := [others => [others => False]];
+      Gen   : Fact_Matrix (1 .. Nodes, 1 .. Facts)      := [others => [others => False]];
+      Kill  : Fact_Matrix (1 .. Nodes, 1 .. Facts)      := [others => [others => False]];
    end record;
 
    -- Exception raised when graph constraints or semantics are violated
