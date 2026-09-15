@@ -22,8 +22,8 @@ procedure Tests is
 
    procedure Reset_Matrices is
    begin
-      In_Mat  := (others => (others => False));
-      Out_Mat := (others => (others => False));
+      In_Mat  := [others => [others => False]];
+      Out_Mat := [others => [others => False]];
    end Reset_Matrices;
 
 begin
